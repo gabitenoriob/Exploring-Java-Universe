@@ -1,5 +1,7 @@
 
 package desafios;
+import java.text.DecimalFormat;
+
 import javax.swing.JOptionPane;
 
 
@@ -18,12 +20,18 @@ public class CalculadoraIMC {
     {
 
     Double imc = peso / (altura * altura);
+    
+    DecimalFormat formato = new DecimalFormat("#.##");
 
-    if(imc < 18.5){return "Abaixo do peso" ;}
-    else if(imc >= 18.5 && imc <= 24.9){return "NORMAL";}
-    else if(imc >= 25 && imc <= 29.9){return "ACIMA DO PESO";}
+    String imcString = formato.format(imc);
+
+
+
+    if(imc < 18.5){return "ABAIXO DO PESO:" + "\nIMC: " +imcString ;}
+    else if(imc >= 18.5 && imc <= 24.9){return "NORMAL:" + "\nIMC: " + imcString;}
+    else if(imc >= 25 && imc <= 29.9){return "ACIMA DO PESO" +"\nIMC: " + imcString;}
     else{
-            return "OBESO";}
+            return "\nOBESO" + "IMC: " + imcString;}
     }
 
 

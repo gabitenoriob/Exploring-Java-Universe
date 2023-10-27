@@ -1,30 +1,24 @@
 package desafios;
 
 import java.time.LocalDate;
-
 import javax.swing.JOptionPane;
-
 import desafios.RegistroSaude.Sexo;
 
-       
+
 public class HealthProfile {
 
     public static void main(String[] args)
     {
 
-    //RegistroSaude meuRegistro = new RegistroSaude("Gabriela", "Batista", RegistroSaude.Sexo.Feminino, LocalDate.parse("2003-11-14"), 1.71, 62.5);
-    /*JOptionPane.showMessageDialog(null, meuRegistro.getImc(62.5, 1.71));
-    JOptionPane.showMessageDialog(null, meuRegistro.getIdade(LocalDate.parse("2003-11-14")));*/
-
-
-    // ou faça o seu proprio
     JOptionPane.showMessageDialog(null, "Bem vindo ao Registro de saude");
+
     String name = JOptionPane.showInputDialog("Digite seu 1 nome:");
     String last_name = JOptionPane.showInputDialog("Digite seu sobrenome:");
     String nascimentoString = JOptionPane.showInputDialog("Digite sua data de nascimento no formato ano-mes-dia:");
     LocalDate nascimento = LocalDate.parse(nascimentoString);
     String sexoString = JOptionPane.showInputDialog("Digite seu sexo:(Feminino,Masculino ou Não Binário)");
     Sexo sexo = RegistroSaude.Sexo.Feminino;
+
     if(sexoString == "Feminino" || sexoString == "feminino")
     {
         sexo = RegistroSaude.Sexo.Feminino;
@@ -48,7 +42,7 @@ public class HealthProfile {
 
             String imc = pessoa.getImc(peso, altura);
 
-      String messageImc = String.format("Seu IMC está : %s%n", imc);
+      String messageImc = String.format("Vocé está : %s%n", imc);
       JOptionPane.showMessageDialog(null, messageImc);
 
            
@@ -66,7 +60,16 @@ public class HealthProfile {
            
         } 
 
+
+
         
+        
+
+
+    //teste de retorno
+    JOptionPane.showMessageDialog(null, pessoa.getSexo());
+        JOptionPane.showMessageDialog(null, pessoa.getAltura());
+            JOptionPane.showMessageDialog(null, pessoa.getNascimento());
 
 
 
