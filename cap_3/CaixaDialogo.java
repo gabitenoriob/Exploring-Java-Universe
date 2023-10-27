@@ -1,5 +1,4 @@
 package cap_3;
-import javax.print.attribute.standard.JobHoldUntil;
 import javax.swing.JOptionPane; 
 
 public class CaixaDialogo
@@ -27,4 +26,4 @@ public class CaixaDialogo
 
    
    } 
-} // end class Dialog1
+} 
